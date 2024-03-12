@@ -1,0 +1,122 @@
+.container
+{
+    background-color: rgba(59, 58, 58, 0.3);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 50px;
+    width: 350px;
+    box-shadow: 3px 3px 10px rgb(0, 0,0 ,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    
+
+
+
+}
+h1{
+
+    font-size: 60px;
+    
+  
+        font-family: "Permanent Marker", cursive;
+        font-weight: 400;
+        font-style: normal;
+      
+      
+      
+  
+      
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+   
+   
+   background-image: url(J14.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100vh;
+   width: 100%;
+   background-position: center;
+
+   
+   
+}
+.backcng
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+
+
+}
+.todo{
+    display: flex;
+    justify-content:space space-between ;
+    padding: 1em;
+}
+.todo_value
+{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    flex-grow: 1;
+    color: rgb(25, 25, 25);
+    border-bottom: 2px solid black;
+    margin-right: 20px;
+    
+    
+}
+.todo_value::placeholder
+{
+    color: rgba(0, 0, 0, 0.262);
+}
+.todo:has(.todo_checkbox:checked)
+{
+    text-decoration: line-through;
+    color: rgb(119, 116, 116);
+    background-color: rgb(41, 40, 40,0.5);
+    backdrop-filter: blur(100px);
+    order: 1;
+    border-radius: 14px;
+   
+
+
+}
+input[type=checkbox]
+{
+    margin-left: 5px;
+    transform: scale(2);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.changebg
+{ 
+    position: relative;
+    
+    margin-top: 75px;
+    border-radius: 10px;
+    padding: 6px;
+height:30px;
+background-color: rgba(58, 58, 58,0.3) ;
+backdrop-filter: blur(5px);
+border: none ;
+color: rgb(24, 24, 24);
+
+}
+

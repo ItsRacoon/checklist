@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body id="cbc">
+    <h1>CHECK LIST </h1>
+    <div class="container">
+        <div class="todo">
+            <input class="todo_value"  type="text" placeholder="(empty)">
+            <input type="checkbox" class="todo_checkbox" > 
+        
+
+        </div>
+        <div class="todo">
+            <input class="todo_value" type="text" placeholder="(empty)">
+            <input type="checkbox" class="todo_checkbox" > 
+            <hr>
+
+        </div>
+
+      
+        <div class="todo">
+            <input class="todo_value" type="text" placeholder="(empty)">
+            <input type="checkbox" class="todo_checkbox" > 
+            <hr>
+
+        </div>
+        <div class="todo">
+            <input class="todo_value" type="text" placeholder="(empty)">
+            <input type="checkbox" class="todo_checkbox" > 
+
+        </div>
+        <div class="todo">
+            <input class="todo_value" type="text" placeholder="(empty)">
+            <input type="checkbox" class="todo_checkbox" > 
+
+        </div>
+        <div class="todo">
+            <input class="todo_value" type="text" placeholder="(empty)">
+            <input type="checkbox" class="todo_checkbox" > 
+
+        </div>
+        <div class="todo">
+            <input class="todo_value" type="text" placeholder="(empty)">
+            <input type="checkbox" class="todo_checkbox" > 
+
+        </div>
+
+
+
+    </div>
+
+    <button class="changebg" id="backgroundchange" onclick="change()">Change Background</button>
+
+
+    <script>
+
+        const images = ["J1.jpg", "J2.jpg", "J3.jpg","J4.jpg","J5.jpg","J7.jpg", "J8.jpg", "J10.jpg","J11.jpg","J12.jpg","J13.jpg", "J14.jpg", "J16.jpg","J18.jpg"];
+       
+
+        function change()
+        {
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            document.getElementById("cbc").style.backgroundImage=`url(${randomImage})`;
+        }
+
+
+        var allFields = document.querySelectorAll(".todo_value");
+
+for (var i = 0; i < allFields.length; i++) {
+
+    allFields[i].addEventListener("keyup", function(event) {
+
+        if (event.keyCode === 13) {
+            console.log('Enter clicked')
+            event.preventDefault();
+            if (this.parentElement.nextElementSibling.querySelector('input')) {
+                this.parentElement.nextElementSibling.querySelector('input').focus();
+            }
+        }
+    });
+
+}
+
+       
+
+
+    </script>
+    
+</body>
+</html>
